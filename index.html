@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Historical Events on September 28</title>
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" >
+</head>
+
+<body>
+    <header class="jumbotron text-center">
+        <h1>Historical Events on September 28</h1>
+        <p>A project showcasing historical events that happened on September 28</p>
+    </header>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4">
+                <h2>Choose a Date:</h2>
+                <div class="btn-group-vertical">
+                    <button type="button" class="btn btn-primary" onclick="showEvent(1)">1542</button>
+                    <button type="button" class="btn btn-primary" onclick="showEvent(2)">1781</button>
+                    <button type="button" class="btn btn-primary" onclick="showEvent(3)">1924</button>
+                    <button type="button" class="btn btn-primary" onclick="showEvent(4)">2008</button>
+                    <button type="button" class="btn btn-primary" onclick="showEvent(5)">2015</button>
+                </div>
+            </div>
+            <div class="col-md-8">
+                <h2 id="eventTitle">Event Title</h2>
+                <p id="eventDate">Date</p>
+                <img src="placeholder.jpg" alt="Event Image" id="eventImage" class="img-fluid">
+                <p id="eventDescription">Event Description</p>
+            </div>
+        </div>
+    </div>
+
+    <footer class="text-center mt-5">
+        <p>Created by [Your Name] | <a href="[link to your GitHub repository]">GitHub Repository</a></p>
+    </footer>
+
+    <script>
+        // Function to change event details based on button click
+        function showEvent(eventNumber) {
+            var titles = [
+                "California 'Discovered' by Juan Rodriquez Cabrillo",
+                "Battle of Yorktown Begins",
+                "First Aerial Circumnavigation Completed by US Army",
+                "Falcon 1 Ground-launched, First Privately Developed Liquid-fuel Vehicle to Orbit",
+                "NASA Finds Running Water on Mars"
+            ];
+            var dates = [
+                "September 28, 1542",
+                "September 28, 1781",
+                "September 28, 1924",
+                "September 28, 2008",
+                "September 28, 2015"
+            ];
+            var images = [
+                "california.jpg",
+                "yorktown.jpg",
+                "circumnavigation.jpg",
+                "falcon1.jpg",
+                "mars.jpg"
+            ];
+            var descriptions = [
+                "Juan Rodríguez Cabrillo, a Portuguese explorer, becomes the first European to set foot on the west coast of the US near what is now San Diego.",
+                "The Battle of Yorktown, the last battle of the American Revolutionary War, begins in Yorktown, Virginia.",
+                "The US Army completes the first aerial circumnavigation of the world, covering a distance of 27,553 miles in 175 days.",
+                "SpaceX's Falcon 1 rocket is ground-launched and becomes the first privately developed liquid-fuel vehicle to put a payload into orbit.",
+                "NASA's Mars Reconnaissance Orbiter confirms the existence of liquid water on the surface of Mars, suggesting the possibility of life."
+            ];
+
+            document.getElementById("eventTitle").innerText = titles[eventNumber - 1];
+            document.getElementById("eventDate").innerText = dates[eventNumber - 1];
+            document.getElementById("eventImage").src = images[eventNumber - 1];
+            document.getElementById("eventDescription").innerText = descriptions[eventNumber - 1];
+        }
+    </script>
+</body>
+
+</html>
